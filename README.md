@@ -1,9 +1,5 @@
 # Devops
 ---
-title: devops部署步骤
-tags: jason
-grammar_cjkRuby: true
----
 ## 框架流程图：
 openshift提供paas平台
 
