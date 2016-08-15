@@ -1,6 +1,9 @@
 # Devops
 ---
-## 框架流程图：
+## 框架图：
+![devops struct map][2]
+ [2]: ./DevOps-struct.png "devops struct"
+## 详细设计图：
 openshift提供paas平台
 
 ![enter description here][1]
