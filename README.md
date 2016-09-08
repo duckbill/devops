@@ -161,7 +161,8 @@ start_container
 sleep 10
 ```
 ## Openshift篇
-==使用openshift作为paas平台==
+
+使用openshift作为paas平台
 1. 安装openshift-server，openshift-clinet，docker-registry
 2. 在openshift-client端执行创建模板文件rdc.json,内容如下
 ``` json
