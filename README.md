@@ -1,15 +1,14 @@
 # Devops
 ---
 ## 框架图：
-![devops struct map][2]
- [2]: ./DevOps-struct.png "devops struct"
+![](https://raw.githubusercontent.com/jasonhubs/devops/screenshot/DevOps-struct.png)
+
 ## 详细设计图：
 openshift提供paas平台
 
-![enter description here][1]
- [1]: ./DevOps.png "DevOps.png"
+![](https://raw.githubusercontent.com/jasonhubs/devops/screenshot/DevOps.png)
 ### 1，gitlab安装
-1. Install and configure the necessary dependencies 
+1. Install and configure the necessary dependencies
 ```bash
 sudo yum install curl policycoreutils openssh-server openssh-clients
 sudo systemctl enable sshd
@@ -20,12 +19,12 @@ sudo systemctl start postfix
 sudo firewall-cmd --permanent --add-service=http
 sudo systemctl reload firewalld
 ```
-2. Add the GitLab package server and install the package 
+2. Add the GitLab package server and install the package
 ```bash
 curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
 sudo yum install gitlab-ce
 ```
-3. Configure and start GitLab 
+3. Configure and start GitLab
 ```bash
 sudo gitlab-ctl reconfigure
 ```
@@ -58,7 +57,7 @@ OPTIONS='--selinux-enabled --log-driver=journald -H=0.0.0.0:2375 -H=unix:///var/
 get_gitlog(){
 cd /root/web/workspace/rdc-slave
 git log > ../gitlog
-cd 
+cd
 CID=""
 }
 
@@ -81,7 +80,7 @@ baseurl=http://yum.paas.com/rhel7
 gpgcheck=0
 enabled=1">/etc/yum.repos.d/openshift.repo
 echo "nameserver 192.168.39.155" > /etc/resolv.conf
-yum install docker -y 
+yum install docker -y
 yum install git -y
 echo 'INSECURE_REGISTRY='--insecure-registry registry.paas.com:5000''>>/etc/sysconfig/docker
 }
@@ -124,7 +123,7 @@ docker stop rdc && docker rm rdc &>clean_log
 
 #start the new rdc container
 start_container(){
-docker run -d  -p 81:80 --name rdc rdc:$CID /sbin/init 
+docker run -d  -p 81:80 --name rdc rdc:$CID /sbin/init
 }
 
 echo "---------------------------init env and get gitlog--------------------------------------"
@@ -298,7 +297,7 @@ sleep 10
   "labels": {
     "template": "rdc-webservice"
   }
-} 
+}
 
 ```
 3. 部署+上线
