@@ -1,12 +1,14 @@
 # Devops
 ---
 ## 框架图：
-![](https://raw.githubusercontent.com/jasonhubs/devops/screenshot/DevOps-struct.png)
+
+![](https://raw.githubusercontent.com/jasonhubs/devops/master/screenshot/DevOps-struct.png)
 
 ## 详细设计图：
 openshift提供paas平台
 
-![](https://raw.githubusercontent.com/jasonhubs/devops/screenshot/DevOps.png)
+![](https://raw.githubusercontent.com/jasonhubs/devops/master/screenshot/DevOps.png)
+
 ### 1，gitlab安装
 1. Install and configure the necessary dependencies
 ```bash
@@ -39,7 +41,7 @@ sudo rpm --import http://pkg.jenkins.io/redhat-stable/jenkins.io.key
 yum install jenkins
 ```
 ### 3，jenkins配置slave
-
+  **pass**
 ### 4，docker安装
 ``` bash
 yum install docker
